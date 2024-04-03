@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cobol>
+    <Constant>
+        <Constant Name="KK_Farm"/>
+        <KK_Farm Line_Number="10"/>
+        <KK_Farm Value="123.45"/>
+    </Constant>
+    <section>ChickenCage</section>
+    <division>Bangladesh</division>
+    <Program-ID>PROGRAM_ID</Program-ID>
+    <day-date-written>1</day-date-written>
+    <month-date-written>March</month-date-written>
+    <year-date-written>2024</year-date-written>
+</cobol>

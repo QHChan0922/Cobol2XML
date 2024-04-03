@@ -31,11 +31,11 @@ import xmlwriter.*;
 
 public class Cobol2XML {
 	/**
-	 * Recognise some basic constructs in a COBOL source code file.
+	 * Recognize some basic constructs in a COBOL source code file.
 	 * And then produce a well-formed XML file with the data identified
 	 * 
 	 * First command line parameter must be path to cobol source file, such as
-	 * "C:\\Users\\<your user name>\\git\\cobol2xml\\base.cbl"
+	 * "C:\\Users\\<user name>\\git\\cobol2xml\\base.cbl"
 	 * 
 	 * Or, when you know exactly where the repository is located and have the file in the right place, simply
 	 * "base.cbl"
@@ -52,14 +52,18 @@ public class Cobol2XML {
     
     
     public static void main(String[] args) throws Exception {
-		/* The first command line parameter is used to get the cobol source file namee
+    	
+    	System.out.println("arg[0] " + args[0]);
+    	System.out.println("arg[1] " + args[1]);
+		/* The first command line parameter is used to get the cobol source file name
 		 * In case you are not sure if you are pointing toward the right file, print out the filename
 		 * like this...
 		 *
-		 * System.out.println("arg[0]" + args[0])
+		 * System.out.println("arg[0]" + args[0]);
+		 * System.out.println("arg[1]"+args[1]);
 		 * 
 		 * A rather crude approach is to hard code the filename for the cobol source file, like this
-		 * InputStream is = new FileInputStream("C:\\Users\\sgs442\\eclipse-workspace\\CobolParser1\\base.cbl")
+		 * InputStream is = new FileInputStream("C:\\Users\\User\\git\\Cobol2XML\\Cobol2XML\\base.cbl")
 		 */
 
         try {

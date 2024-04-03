@@ -24,6 +24,11 @@ package cobol;
 import utensil.*;
 
 public class Cobol implements PubliclyCloneable {
+	// Constant Value
+	protected String constantName;
+	protected double constantValue;
+	protected int    lineNumber = 0;
+
 	protected String commentLine;
 	protected String program_id;
 	protected String sectionName;
@@ -31,13 +36,13 @@ public class Cobol implements PubliclyCloneable {
 	protected int dayDateWritten = 0;
 	protected String monthDateWritten;
 	protected int yearDateWritten = 0;
-
 	
 	/**
 	 * Return a copy of this object.
 	 *
 	 * @return a copy of this object
-	 */
+	*/
+	
 	public Object clone() {
 		try {
 			return super.clone();
@@ -46,8 +51,9 @@ public class Cobol implements PubliclyCloneable {
 			throw new InternalError();
 		}
 	}
+	
 	/**
-	 * Compares two objects for equality, treating nulls carefullly,
+	 * Compares two objects for equality, treating nulls carefully,
 	 * and relying on the first object's implementation of <code>
 	 * equals()</code>.
 	 *
@@ -58,6 +64,7 @@ public class Cobol implements PubliclyCloneable {
 	 * @return  <code>true</code> if the objects are equal and
 	 *          <code>false</code> otherwise.
 	 */
+	
 	public static boolean ifCobolObjEqual(Object o1, Object o2) {
 		if (o1 == null || o2 == null) {
 			return o1 == null && o2 == null;
@@ -247,4 +254,56 @@ public class Cobol implements PubliclyCloneable {
 		
 		return buf.toString();
 	}
-}
+	
+		// Add getters and setters by using alt+shift+s, r
+		// getConstantName();
+		// getConstantValue();
+		// getLineNumber();
+		// setConstantName();
+		// setConstantValue();
+		// setLineNumber();
+	
+		/**
+		 * @return the constantName
+		 */
+	
+		public String getConstantName() {
+			return constantName;
+		}
+		
+		/**
+		 * @param constantName the constantName to set
+		 */
+		public void setConstantName(String constantName) {
+			this.constantName = constantName;
+		}
+		
+		/**
+		 * @return the constantValue
+		 */
+		public double getConstantValue() {
+			return constantValue;
+		}
+		
+		/**
+		 * @param constantValue the constantValue to set
+		 */
+		public void setConstantValue(double constantValue) {
+			this.constantValue = constantValue;
+		}
+		
+		/**
+		 * @return the lineNumber
+		 */
+		public int getLineNumber() {
+			return lineNumber;
+		}
+		
+		/**
+		 * @param lineNumber the lineNumber to set
+		 */
+		public void setLineNumber(int lineNumber) {
+			this.lineNumber = lineNumber;
+		}
+	
+} // end class
